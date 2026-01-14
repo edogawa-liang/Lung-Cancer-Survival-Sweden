@@ -4,7 +4,28 @@ This repository contains a course project for Analysis of Survival Data, based o
 
 ---
 
-## ## Kaplan–Meier Plots
+## Kaplan–Meier Survival Curves
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="img/KM/km_treatment.png" width="300"><br>
+      Treatment Type
+    </td>
+    <td align="center">
+      <img src="img/KM/km_age.png" width="300"><br>
+      Age Groups
+    </td>
+    <td align="center">
+      <img src="img/KM/km_hypertension.png" width="300"><br>
+      Hypertension
+    </td>
+  </tr>
+</table>
+
+These Kaplan–Meier curves provide descriptive insights prior to adjustment.
+Survival curves largely overlap across treatment types, while clearer separation
+is observed by age group and hypertension status.
 
 
 
