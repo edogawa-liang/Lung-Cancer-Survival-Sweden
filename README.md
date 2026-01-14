@@ -48,7 +48,7 @@ h_i(t \mid Z_i) = h_{0,\text{stage}(i)}(t)
 + \beta_{\text{cir}}\,\text{cirrhosis}_i
 + \beta_{\text{trt}}^\top \text{treatment}_i
 + \beta_{\text{ht}}\,\text{hypertension}_i
-+ \beta_{\text{ht},t}\,\text{hypertension}_i \log t
++ \beta_{\text{ht},t}\,\text{hypertension}_i \log (t)
 \right).
 ```
 
