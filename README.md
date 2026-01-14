@@ -9,15 +9,15 @@ This repository contains a course project for Analysis of Survival Data, based o
 <table>
   <tr>
     <td align="center">
-      <img src="./KM_plot/km_treatment.png" width="300"><br>
+      <img src="./KM_plot/KM_treatment.png" width="300"><br>
       Treatment Type
     </td>
     <td align="center">
-      <img src="./KM_plot/km_age.png" width="300"><br>
+      <img src="./KM_plot/KM_age.png" width="300"><br>
       Age Groups
     </td>
     <td align="center">
-      <img src="./KM_plot/km_hypertension.png" width="300"><br>
+      <img src="./KM_plot/KM_hypertension.png" width="300"><br>
       Hypertension
     </td>
   </tr>
@@ -38,7 +38,7 @@ model diagnostics; details are provided in the report.
 Survival was analyzed using a *stratified Cox proportional hazards model* with a time-dependent
 effect for hypertension. Let $T_i$ denote the survival time for individual $i$. The model is
 
-```tex
+$$
 h_i(t \mid Z_i) = h_{0,\text{stage}(i)}(t)
 \exp\!\left(
 \beta_{\text{age}}\,\text{age}_i
@@ -47,7 +47,7 @@ h_i(t \mid Z_i) = h_{0,\text{stage}(i)}(t)
 + \beta_{\text{ht}}\,\text{hypertension}_i
 + \beta_{\text{ht},t}\,\text{hypertension}_i \log t
 \right).
-```
+$$
 
 The baseline hazard is stratified by cancer stage, and hypertension is allowed to have a
 time-dependent effect through an interaction with $\log(t)$.
