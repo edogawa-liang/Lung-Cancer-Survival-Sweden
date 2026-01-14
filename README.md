@@ -6,22 +6,22 @@ This repository contains a course project for Analysis of Survival Data, based o
 
 ## Kaplan–Meier Survival Curves
 
+
 <table>
   <tr>
-    <td align="center">
-      <img src="./KM_plot/km_treatment.png" width="300"><br>
-      Treatment Type
+    <td align="center"><b>Treatment Type</b><br>
+      <img src="KM_plot/km_treatment.png" width="300">
     </td>
-    <td align="center">
-      <img src="./KM_plot/km_age.png" width="300"><br>
-      Age Groups
+    <td align="center"><b>Age Groups</b><br>
+      <img src="KM_plot/km_age.png" width="300">
     </td>
-    <td align="center">
-      <img src="./KM_plot/km_hypertension.png" width="300"><br>
-      Hypertension
+    <td align="center"><b>Hypertension</b><br>
+      <img src="KM_plot/km_hypertension.png" width="300">
     </td>
   </tr>
 </table>
+
+
 
 
 These Kaplan–Meier curves provide descriptive insights prior to adjustment.
