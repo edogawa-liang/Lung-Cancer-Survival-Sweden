@@ -37,11 +37,10 @@ These Kaplan–Meier curves show unadjusted survival patterns, with clearer sepa
 
 ## Cox Model
 
-Survival was analyzed using a *stratified Cox proportional hazards model*, with covariates selected based on model diagnostics.
+Survival was analyzed using a *stratified Cox proportional hazards model*, with covariates
+selected based on model diagnostics.   
 
-The baseline hazard was stratified by cancer stage, with a time-dependent effect for hypertension.
-
-
+The final model is:
 ```math
 h_i(t \mid Z_i) = h_{0,\text{stage}(i)}(t)
 \exp\!\left(
@@ -52,6 +51,9 @@ h_i(t \mid Z_i) = h_{0,\text{stage}(i)}(t)
 + \beta_{\text{ht},t}\,\text{hypertension}_i \log t
 \right).
 ```
+
+The baseline hazard is stratified by cancer stage, with a time-dependent effect
+for hypertension.
 
 
 
