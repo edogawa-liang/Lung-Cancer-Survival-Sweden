@@ -38,7 +38,7 @@ model diagnostics; details are provided in the report.
 Survival was analyzed using a *stratified Cox proportional hazards model* with a time-dependent
 effect for hypertension. Let $T_i$ denote the survival time for individual $i$. The model is
 
-$$
+```math
 h_i(t \mid Z_i) = h_{0,\text{stage}(i)}(t)
 \exp\!\left(
 \beta_{\text{age}}\,\text{age}_i
@@ -47,7 +47,7 @@ h_i(t \mid Z_i) = h_{0,\text{stage}(i)}(t)
 + \beta_{\text{ht}}\,\text{hypertension}_i
 + \beta_{\text{ht},t}\,\text{hypertension}_i \log t
 \right).
-$$
+```
 
 The baseline hazard is stratified by cancer stage, and hypertension is allowed to have a
 time-dependent effect through an interaction with $\log(t)$.
