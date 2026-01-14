@@ -9,15 +9,15 @@ This repository contains a course project for Analysis of Survival Data, based o
 <table>
   <tr>
     <td align="center">
-      <img src="img/KM/km_treatment.png" width="300"><br>
+      <img src="KM_plot/km_treatment.png" width="300"><br>
       Treatment Type
     </td>
     <td align="center">
-      <img src="img/KM/km_age.png" width="300"><br>
+      <img src="KM_plot/km_age.png" width="300"><br>
       Age Groups
     </td>
     <td align="center">
-      <img src="img/KM/km_hypertension.png" width="300"><br>
+      <img src="KM_plot/km_hypertension.png" width="300"><br>
       Hypertension
     </td>
   </tr>
