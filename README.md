@@ -1,4 +1,4 @@
-# Lung Cancer Survival Analysis in Sweden
+# Lung Cancer Survival Analysis in Sweden 🇸🇪
 
 This repository contains a course project for Analysis of Survival Data, based on lung cancer patients in Sweden. The aim is to examine whether survival differs across treatment groups and whether other patient characteristics have effects on survival that vary over time.
 
@@ -38,7 +38,7 @@ model diagnostics; details are provided in the report.
 Survival was analyzed using a *stratified Cox proportional hazards model* with a time-dependent
 effect for hypertension. Let $T_i$ denote the survival time for individual $i$. The model is
 
-$$
+```tex
 h_i(t \mid Z_i) = h_{0,\text{stage}(i)}(t)
 \exp\!\left(
 \beta_{\text{age}}\,\text{age}_i
@@ -47,7 +47,7 @@ h_i(t \mid Z_i) = h_{0,\text{stage}(i)}(t)
 + \beta_{\text{ht}}\,\text{hypertension}_i
 + \beta_{\text{ht},t}\,\text{hypertension}_i \log t
 \right).
-$$
+```
 
 The baseline hazard is stratified by cancer stage, and hypertension is allowed to have a
 time-dependent effect through an interaction with $\log(t)$.
