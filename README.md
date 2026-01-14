@@ -1,10 +1,13 @@
 # Lung Cancer Survival Analysis in Sweden 🇸🇪
 
-This repository contains a course project for Analysis of Survival Data, based on lung cancer patients in Sweden. The aim is to examine whether survival differs across treatment groups and whether other patient characteristics have effects on survival that vary over time.
+This repository contains a course project for Analysis of Survival Data using lung cancer data from Sweden. It examines survival differences across treatment groups and time-varying effects of patient characteristics.
+
 
 ---
 
 ## Kaplan–Meier Survival Curves
+These Kaplan–Meier curves show unadjusted survival patterns, with clearer separation by age group and hypertension.
+
 
 <table>
   <tr>
@@ -16,27 +19,28 @@ This repository contains a course project for Analysis of Survival Data, based o
       <img src="./KM_plot/KM_age.png" width="300"><br>
       Age Groups
     </td>
+  </tr>
+  <tr>
     <td align="center">
       <img src="./KM_plot/KM_hypertension.png" width="300"><br>
       Hypertension
+    </td>
+    <td align="center">
+      <img src="./KM_plot/KM_cirrhosis.png" width="250"><br>
+      Cirrhosis
     </td>
   </tr>
 </table>
 
 
-These Kaplan–Meier curves provide descriptive insights prior to adjustment.
-Survival curves largely overlap across treatment types, while clearer separation
-is observed by age group and hypertension status.
-
 
 
 ## Cox Model
 
-Covariates included in the final model were selected based on clinical relevance and
-model diagnostics; details are provided in the report.
+Survival was analyzed using a *stratified Cox proportional hazards model*, with covariates selected based on model diagnostics.
 
-Survival was analyzed using a *stratified Cox proportional hazards model* with a time-dependent
-effect for hypertension. Let $T_i$ denote the survival time for individual $i$. The model is
+The baseline hazard was stratified by cancer stage, with a time-dependent effect for hypertension.
+
 
 ```math
 h_i(t \mid Z_i) = h_{0,\text{stage}(i)}(t)
@@ -49,19 +53,15 @@ h_i(t \mid Z_i) = h_{0,\text{stage}(i)}(t)
 \right).
 ```
 
-The baseline hazard is stratified by cancer stage, and hypertension is allowed to have a
-time-dependent effect through an interaction with $\log(t)$.
 
 
 ---
 
 ## Results
 
-After adjusting for patient characteristics and cancer stage:
 
 - **Treatment type** shows no clear association with survival; hazard ratios are close to 1.
 - **Age** is associated with a higher risk of death, with an approximate **1.2% increase in risk per year**.
-
 - **Hypertension** has a strong **time-dependent effect**, with substantially higher risk early
   in follow-up that decreases over time.
 
@@ -83,7 +83,7 @@ Lung-Cancer-Survival-Sweden/
 ├── data/
 │   └── lung_cancer_sweden.csv         # Lung cancer survival dataset (Sweden)
 │
-├── pdf/
+├── reports/
 │   ├── km_group_survival.pdf          # Assignment 1 report: Kaplan–Meier analysis
 │   ├── cox_model_adjusted_survival.pdf# Assignment 2 report: Cox regression results
 │   └── lung_cancer_survival_slides.pdf# Presentation slides summarizing the project
